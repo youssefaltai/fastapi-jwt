@@ -7,7 +7,7 @@ router = APIRouter(prefix="/example", tags=["JWT example"])
 
 
 @router.post("/")
-async def create_user(username: str):
+async def create_token(username: str):
     return sign_jwt({"username": username})
 
 
