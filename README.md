@@ -5,7 +5,7 @@ set up and ready.
 
 ## How to use
 
-As you can see in ```example.py```, 
+As you can see in ```example.py```,
 the endpoint ```create_token(username)```
 uses the method ```sign_jwt(data)```
 to generate a JWT token from a payload.
@@ -20,7 +20,7 @@ The endpoint ```get_secret()```
 is an example of a protected endpoints
 that requires JWT token authorization.
 The way you create protected endpoints is by
-adding ```Depends(JWTBearer())``` to the endpoint's 
+adding ```Depends(JWTBearer())``` to the endpoint's
 ```dependencies```  list.
 
 ```
@@ -44,3 +44,20 @@ def verify_jwt(jwt_token: str) -> bool:
     # Put token verification logic here
     ...
 ```
+
+Also, do not forget to include these environment variables
+in a ```.env``` in your project:
+
+#### ```JWT_SECRET```
+
+A string that you should NOT expose in public, used in
+creating the JWT from the payload.
+
+#### ```JWT_ALGORITHM```
+
+[See all possible values for ```JWT_ALGORITHM```](https://pyjwt.readthedocs.io/en/latest/algorithms.html?highlight=algorithm#digital-signature-algorithms)
+
+#### ```JWT_EXPIRES```
+
+An integer number of seconds that the JWT expires after
+from the time of its creation.
