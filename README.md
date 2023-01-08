@@ -30,8 +30,8 @@ async def get_secret():
 ```
 
 Now, the only thing left is the JWT token verification,
-which you can easily and fully customize by modifying the
-```verify_jwt(jwt_token)``` method in ```auth/verify.py```
+which you can easily fully customize by modifying the
+method ```verify_jwt(jwt_token)``` in ```auth/verify.py```
 
 ```
 from auth.auth_handler import decode_jwt
