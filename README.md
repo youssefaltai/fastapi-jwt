@@ -55,6 +55,9 @@ creating the JWT from the payload.
 
 #### ```JWT_ALGORITHM```
 
+The name of the algorithm to be used
+in creating the JWT token.
+
 [See all possible values for ```JWT_ALGORITHM```](https://pyjwt.readthedocs.io/en/latest/algorithms.html?highlight=algorithm#digital-signature-algorithms)
 
 #### ```JWT_EXPIRES```
