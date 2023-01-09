@@ -1,7 +1,6 @@
 # FastAPI + JWT
 
-A minimal starter FastAPI project with JWT authentication
-set up and ready.
+A minimal FastAPI starter project with JWT authentication set up and ready.
 
 ## How to use
 
