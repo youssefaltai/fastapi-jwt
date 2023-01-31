@@ -1,6 +1,6 @@
 import os
 import time
-from typing import Dict
+from typing import Dict, Union
 
 import jwt
 from dotenv import load_dotenv
@@ -25,7 +25,7 @@ def sign_jwt(data: Dict) -> Dict[str, str]:
     }
 
 
-def decode_jwt(jwt_token: str) -> Dict | None:
+def decode_jwt(jwt_token: str) -> Union[Dict , None]:
     try:
         data = jwt.decode(jwt_token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
 
